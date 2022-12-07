@@ -12,11 +12,11 @@ export class CadastroPage implements OnInit {
 
   constructor(private formBuilder: FormBuilder) {
     this.formCadastro = this.formBuilder.group({
-      nome: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
-      cpf: ['', Validators.compose([Validators.required])],
-      email: ['', Validators.compose([Validators.required, Validators.email])],
-      senha: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(12)])],
-      confirmarSenha: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(12)])],
+      nome: [''],
+      cpf: [''],
+      email: [''],
+      senha: [''],
+      confirmarsenha: [''],
     });
   }
 
@@ -24,7 +24,7 @@ export class CadastroPage implements OnInit {
   }
 
   salvarCadastro(){
-    console.log('Formulário: ', this.formCadastro.valid);
+
   }
 
 }
